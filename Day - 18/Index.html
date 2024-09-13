@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #LoginMain{
+        display: none;
+    }
+    span.login:hover {
+        text-decoration: underline #7429D9;
+    }
+
+    span.signup:hover {
+        text-decoration: underline #7429D9;
+    }
+
+    span.fp:hover {
+        text-decoration: underline #7429D9;
+    }
+</style>
+
+<body>
+    <header class="h-[70px] w-[100%] flex justify-between items-center fixed z-[100]">
+        <div class="logo h-[70px] w-[150px] ms-[10px] flex justify-center items-center">
+            <div class="text-white text-[25px]">CodingLab</div>
+        </div>
+        <nav class="h-[70px] w-[500px] text-white flex justify-between items-center">
+            <a href="" class="text-[21] font-semibold">Home</a>
+            <a href="" class="text-[21] font-semibold">About</a>
+            <a href="" class="text-[21] font-semibold">Product</a>
+            <a href="" class="text-[21] font-semibold">Service</a>
+        </nav>
+        <div class="h-[40px] w-[110px] border border-white flex justify-center items-center me-[35px] rounded">
+            <div class="login"><a href="" class="text-white text-[22px]" id="form-open">Login</a></div>
+        </div>
+    </header>
+    <div class="image relative">
+        <img src="https://www.sammyfans.com/wp-content/uploads/2022/03/macbook.jpg" alt="" width="100%">
+    </div>
+
+    <!-- Signup From -->
+    <div
+        class="SignupMain home h-[350px] w-[300px] bg-white absolute top-[25%] left-[40%] rounded-lg flex justify-center p-[38px]" id="SignupMain">
+        <i class="fa-solid fa-xmark absolute top-[10px] left-[91%]"
+            style="color: #000000; font-size: 20px; cursor: pointer;"></i>
+        <form action="#" id="signupform" class="flex flex-wrap justify-center">
+            <h2 class="text-[25px] font-bold text-center">Signup</h2>
+            <input type="email" id="email" placeholder="PLease Enter Your Email"
+                class="border-b-2 border-black h-[35px] w-[250px] text-[14px] ps-[11%]">
+                <span id="emailText"></span>
+            <i class="fa-regular fa-envelope absolute top-[28%] right-[85%]" style="color: #000000;"></i><br>
+            <input type="password" id="password" placeholder="Create Password"
+                class="border-b-2 border-black h-[35px] w-[250px] text-[14px] ps-[11%]">
+                <span id="PasswordText"></span>
+            <i class="fa-regular fa-eye-slash absolute top-[41%] left-[83%] pw_hide cursor-pointer"
+                style="color: #000000;"></i>
+            <i class="fa-solid fa-lock absolute top-[41%] right-[86%]" style="color: #000000;"></i><br>
+            <input type="password" id="password" placeholder="Confirm Password"
+                class="border-b-2 border-black h-[35px] w-[250px] text-[14px] ps-[11%]">
+                <span id="PasswordText"></span>
+            <i class="fa-regular fa-eye-slash absolute top-[55%] left-[83%] pw_hide cursor-pointer"
+                style="color: #000000;"></i>
+            <i class="fa-solid fa-lock absolute top-[55%] right-[86%]" style="color: #000000;"></i><br>
+            <button type="submit" class="h-[35px] w-[250px] bg-[#7427D9] text-white">Submit</button>
+
+            <h2 class="cursor-pointer" id="signupSwapButton">Already have an account? <span class="login text-[#7427D9]">Login</span></h2>
+        </form>
+    </div>
+
+    <!-- Login From -->
+    <div
+        class="LoginMain h-[350px] w-[300px] bg-white absolute top-[25%] left-[40%] rounded-lg flex justify-center p-[38px]" id="LoginMain">
+        <i class="fa-solid fa-xmark absolute top-[10px] left-[91%]"
+            style="color: #000000; font-size: 20px; cursor: pointer;"></i>
+        <form action="#" id="loginup" class="flex flex-wrap justify-center">
+            <h2 class="text-[25px] font-bold text-center">Login</h2>
+            <input type="email" id="loginemail" placeholder="PLease Enter Your Email"
+                class="border-b-2 border-black h-[35px] w-[250px] text-[14px] ps-[11%]">
+                <span id="emailText"></span>
+            <i class="fa-regular fa-envelope absolute top-[29%] right-[86%]" style="color: #000000;"></i><br>
+
+            <input type="password" id="loginpass" placeholder="Please enter your password"
+                class="border-b-2 border-black h-[35px] w-[250px] text-[14px] ps-[11%]">
+                <span id="PasswordText"></span>
+            <i class="fa-regular fa-eye-slash absolute top-[42%] left-[83%] pw_hide cursor-pointer"
+                style="color: #000000;"></i>
+            <i class="fa-solid fa-lock absolute top-[42%] right-[86%]" style="color: #000000;"></i><br>
+
+            <div class="remFor">
+                <span>
+                    <input type="checkbox" name="" id="">
+                    <label for="" class="">Remember me</label>
+                </span>
+                <span class="fp text-[#7427D9] ml-[7px] text-[14px] cursor-pointer">Forgot Password</span>
+            </div>
+            <button type="submit" class="h-[35px] w-[250px] bg-[#7427D9] text-white">Login</button>
+
+            <h2 class="cursor-pointer" id="swapButton">Don't have an account? <span class="signup text-[#7427D9]">Signup</span></h2>
+        </form>
+    </div>
+</body>
+<script src="Script.js"></script>
+
+</html>
